@@ -1,0 +1,1232 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --font-secundary: 'Montserrat', sans-serif;
+    --corBranca: #ffffff;
+    --corPrincipal: #c01818;
+    --preto: #000000;
+    --corFonteBranco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--font-secundary);
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.295), rgba(255, 227, 227, 0.377)), url(img/bgtruck.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+}
+
+.container-area {
+    max-width: 1200px;
+    max-height: 580px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #ff4f4f;
+    background-color: var(--corBranca);
+
+}
+
+.container-area form {
+    flex: 1;
+}
+
+.container-form {
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.container-check {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.container-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-radios {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-radios input {
+    margin-right: 3px;
+}
+
+.container-radios label {
+    display: flex;
+    font-size: 16px;
+    color: var(--preto);
+    font-weight: 600;
+    align-items: center;
+    justify-content: center
+}
+
+.container-input-radio-label {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-input-radio-label label {
+    font-size: 14px;
+    color: var(--preto);
+    font-weight: 600;
+}
+
+.container-input-radio-label .input-label {
+    display: flex;
+}
+
+.container-question {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-question {
+    padding: 4px;
+    border: 1px solid;
+}
+
+.gp1 {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.gp2 {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.gp3 {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.gp4 {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.gp5 {
+    width: 140px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.form form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+}
+
+form label input {
+    height: 50px;
+    width: 380px;
+    border: 0;
+    outline: 0;
+    border-bottom: 3px solid var(--corPrincipal);
+    transition: border-bottom 1s;
+    font-size: 18px;
+    color: var(--preto);
+    font-weight: 600;
+}
+
+form label input::placeholder {
+    font-size: 18px;
+}
+
+form label input:hover {
+    border-bottom: 3px solid var(--preto);
+}
+
+.botoes button {
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+.container-pai-button {
+    display: flex;
+    height: 15vh;
+    width: 60%;
+}
+
+.container-button #cadastrar {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    background-color: #399d35;
+    font-weight: 800;
+    color: var(--corFonteBranco);
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.container-button #cadastrar:hover {
+    background-color: #275f20;
+    color: var(--corFonteBranco);
+}
+
+.container-button #sair {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    background-color: #9d3535;
+    font-weight: 800;
+    color: var(--corFonteBranco);
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.container-button #sair:hover {
+    background-color: #5f2020;
+    color: var(--corFonteBranco);
+}
+
+
+
+#inputkm {
+    font-size: 22px;
+    padding-left: 5px;
+    height: 30px;
+    width: 55%;
+}
+
+#inputkm::placeholder {
+    font-size: 14px;
+}
+
+.container-text-area {
+    display: flex;
+    width: 35%;
+}
+
+#obs {
+    font-size: 16px;
+    padding-left: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+#obs::placeholder {
+    font-size: 14px;
+}
+
+/* Style dos dois <select>*/
+.ui-select-style {
+    padding: 10px;
+    width: 275px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    outline: none;
+    font-size: 14px;
+}
+
+.ui-select-style:focus {
+    border: 1px solid rgb(229, 140, 140);
+    box-shadow: 1px 1px 1px rgba(229, 140, 140, 0.25);
+}
+
+
+.abrirModal {
+    display: flex;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.164);
+}
+
+.modal-area {
+    width: 280px;
+    height: 70px;
+    background-color: #399d35;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.modal-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-agente {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.container-rodape {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Chrome e outros */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*Responsividade */
+@media only screen and (max-device-width: 349px) and (min-device-width: 270px) {
+
+    .container-area {
+        max-height: 100vh;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px #ff4f4f;
+        background-color: var(--corBranca);
+    }
+
+    .container-form {
+        height: 10vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .container-radios {
+        width: 90%;
+        height: 100%;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .gp1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+    }
+
+    .gp2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp5 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .container-button #cadastrar {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    .container-button #sair {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+
+    .botoes button {
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+
+    .container-pai-button {
+        width: 100%;
+        display: flex;
+        height: 15vh;
+    }
+
+    .ui-select-style {
+        padding: 0px;
+        height: 35px;
+        width: 34vw;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        outline: none;
+        font-size: 8px;
+        font-weight: 600;
+        text-align: justify;
+    }
+
+    .container-radios label {
+        display: flex;
+        font-size: 14px;
+        color: var(--preto);
+        font-weight: 600;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .container-check {
+        display: flex;
+        height: calc(100% - 30vh);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-rodape {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-text-area {
+        display: flex;
+        width: 50%;
+        height: 50px;
+    }
+
+}
+
+@media only screen and (max-device-width: 399px) and (min-device-width: 350px) {
+    .container-area {
+        max-height: 100vh;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px #ff4f4f;
+        background-color: var(--corBranca);
+    }
+
+    .container-form {
+        height: 10vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .container-radios {
+        width: 90%;
+        height: 100%;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .gp1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+    }
+
+    .gp2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp5 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .container-button #cadastrar {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .container-button #sair {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+
+    .botoes button {
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+
+    .container-pai-button {
+        width: 100%;
+        display: flex;
+        height: 15vh;
+    }
+
+    .ui-select-style {
+        height: 35px;
+        padding: 0px;
+        width: 33vw;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        outline: none;
+        font-size: 10px;
+        font-weight: 600;
+        text-align: justify;
+    }
+
+    .container-radios label {
+        display: flex;
+        font-size: 14px;
+        color: var(--preto);
+        font-weight: 600;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .container-check {
+        display: flex;
+        height: calc(100% - 30vh);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-rodape {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-text-area {
+        display: flex;
+        width: 50%;
+        height: 50px;
+    }
+
+}
+
+
+@media only screen and (max-device-width: 520px) and (min-device-width: 400px) {
+
+    .container-area {
+        max-height: 100vh;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px #ff4f4f;
+        background-color: var(--corBranca);
+    }
+
+    .container-form {
+        height: 10vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .container-radios {
+        width: 90%;
+        height: 100%;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .gp1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+    }
+
+    .gp2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp5 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .container-button #cadastrar {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .container-button #sair {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+
+    .botoes button {
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+
+    .container-pai-button {
+        width: 100%;
+        display: flex;
+        height: 15vh;
+    }
+
+    .ui-select-style {
+        height: 35px;
+        padding: 0px;
+        width: 33vw;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        outline: none;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: justify;
+    }
+
+    .container-radios label {
+        display: flex;
+        font-size: 16px;
+        color: var(--preto);
+        font-weight: 600;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .container-check {
+        display: flex;
+        height: calc(100% - 30vh);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-rodape {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-text-area {
+        display: flex;
+        width: 50%;
+        height: 50px;
+    }
+
+}
+
+@media only screen and (max-device-width: 700px) and (min-device-width: 521px) {
+
+    .container-area {
+        max-width: 750px;
+        max-height: 100vh;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px #ff4f4f;
+        background-color: var(--corBranca);
+    }
+
+    .container-form {
+        height: 10vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .container-radios {
+        width: 90%;
+        height: 100%;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .gp1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+    }
+
+    .gp2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp5 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .container-button #cadastrar {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    .container-button #sair {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+
+    .botoes button {
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+
+    .container-pai-button {
+        width: 90%;
+        display: flex;
+        height: 15vh;
+    }
+
+    .ui-select-style {
+        height: 35px;
+        padding: 0px;
+        width: 33vw;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        outline: none;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: justify;
+    }
+
+    .container-radios label {
+        display: flex;
+        font-size: 16px;
+        color: var(--preto);
+        font-weight: 600;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .container-check {
+        display: flex;
+        height: calc(100% - 30vh);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-rodape {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-text-area {
+        display: flex;
+        width: 50%;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-device-width: 950px) and (min-device-width: 701px) {
+
+    .container-area {
+        max-height: 100vh;
+        max-width: 750px;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px #ff4f4f;
+        background-color: var(--corBranca);
+    }
+
+    .container-form {
+        height: 10vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .container-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .container-radios {
+        width: 90%;
+        height: 100%;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .gp1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+    }
+
+    .gp2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp5 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .container-button #cadastrar {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+    .container-button #sair {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+
+
+    .botoes button {
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+
+    .container-pai-button {
+        width: 80%;
+        display: flex;
+        height: 15vh;
+    }
+
+    .container-radios label {
+        display: flex;
+        font-size: 16px;
+        color: var(--preto);
+        font-weight: 600;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .ui-select-style {
+        height: 40px;
+        padding: 0px;
+        width: 33vw;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        outline: none;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: justify;
+    }
+
+    .container-check {
+        display: flex;
+        height: calc(100% - 30vh);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-rodape {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-text-area {
+        display: flex;
+        width: 50%;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-device-width: 1250px) and (min-device-width: 951px) {
+    .container-area {
+        max-height: 100vh;
+        max-width: 750px;
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px #ff4f4f;
+        background-color: var(--corBranca);
+    }
+
+    .container-form {
+        height: 10vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+
+
+    .container-button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .container-radios {
+        width: 90%;
+        height: 100%;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .container-radios label {
+        display: flex;
+        font-size: 16px;
+        color: var(--preto);
+        font-weight: 600;
+        align-items: center;
+        justify-content: left;
+    }
+
+    .gp1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+    }
+
+    .gp2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp3 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp4 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .gp5 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 360px;
+        justify-content: space-between;
+        margin-top: 18px;
+    }
+
+    .container-button #cadastrar {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .container-button #relatorio {
+        width: 100%;
+    }
+
+    .container-button #sair {
+        width: 100%;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+
+    .botoes button {
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+
+    .container-pai-button {
+        display: flex;
+        height: 15vh;
+    }
+
+    .ui-select-style {
+        padding: 10px;
+        width: 25vw;
+        border: 1px solid #000000;
+        border-radius: 5px;
+        color: rgb(0, 0, 0);
+        outline: none;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: justify;
+    }
+
+}
