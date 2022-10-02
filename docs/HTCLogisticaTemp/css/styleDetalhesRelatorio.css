@@ -1,0 +1,692 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --font-secundary: 'Montserrat', sans-serif;
+    --corBranca: #ffffff;
+    --corPrincipal: #881313;
+    --preto: #000000;
+    --corFonteBranco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--font-secundary);
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.295), rgba(255, 227, 227, 0.377)), url(img/bgtruck.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+}
+
+.botoes {
+    display: flex;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+.container-area {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: solid 1px;
+    background-color: var(--corBranca);
+    flex-direction: column;
+
+}
+
+.container-area2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-button {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-dados {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.cabecalho {
+    display: flex;
+    width: 100%;
+    margin-left: 20px;
+    font-weight: 600;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.container-button .frota {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    background-color: #35669d;
+    font-weight: 800;
+    color: var(--corFonteBranco);
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.container-button .frota:hover {
+    background-color: #203d5f;
+    color: var(--corFonteBranco);
+}
+
+.container-cabecalho {
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+
+.form-img {
+    width: 40%;
+    height: 100%;
+}
+
+.img-area {
+    width: 100%;
+    height: 100%;
+}
+
+.img-area img {
+    width: 100%;
+    height: 95%;
+}
+
+.ui-select-style1 {
+    width: 350px;
+    padding-left: 7px;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    color: rgb(119, 119, 119);
+    outline: none;
+}
+
+.ui-select-style1:focus {
+    border: 1px solid rgb(140, 174, 229);
+    box-shadow: 1px 1px 1px rgba(140, 174, 229, 0.25);
+}
+
+
+.ui-select-style2 {
+    width: 350px;
+    padding-left: 7px;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    color: rgb(119, 119, 119);
+    outline: none;
+}
+
+.ui-select-style2:focus {
+    border: 1px solid rgb(140, 174, 229);
+    box-shadow: 1px 1px 1px rgba(140, 174, 229, 0.25);
+}
+
+/*TABELA SCROLL*/
+
+.tg {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+.tg th {
+    text-decoration: none;
+    padding: 5px;
+    padding-left: 110px;
+    text-align: left;
+    width: 38vw;
+}
+
+.tg td {
+    text-decoration: none;
+    padding: 5px;
+    text-align: left;
+    width: 650px;
+}
+
+
+.tg thead {
+    background-color: rgb(7, 0, 0);
+    color: #fdfdfd;
+    transition: background-color 0.3s;
+}
+
+.tg thead:hover {
+    background-color: #5f2020;
+    color: var(--corFonteBranco);
+}
+
+.tg thead tr {
+    display: block;
+    position: relative;
+}
+
+.tg tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.tg tbody tr:hover {
+    background-color: rgb(224, 224, 224);
+    color: #000000;
+    transition: background-color 0.3s;
+}
+
+
+@media only screen and (max-device-width: 349px) and (min-device-width: 270px) {
+
+    .container-area {
+        width: 100vw;
+        height: 90vh;
+    }
+
+    .container-area2 {
+        width: 98%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .container-dados {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: center;
+    }
+
+    .tg {
+        table-layout: fixed;
+        border-collapse: collapse;
+        height: 100%;
+        width: 100%;
+    }
+
+    .tg th {
+        text-decoration: none;
+        padding: 5px;
+        padding-left: 25px;
+        text-align: left;
+        width: 67%;
+    }
+
+    .tg tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .cabecalho {
+        display: flex;
+        width: 100%;
+        margin-left: 20px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-device-width: 399px) and (min-device-width: 350px) {
+
+    .container-area {
+        width: 100vw;
+        height: 90vh;
+    }
+
+    .container-area2 {
+        width: 98%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .container-dados {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: center;
+    }
+
+    .tg {
+        table-layout: fixed;
+        border-collapse: collapse;
+        height: 100%;
+        width: 100%;
+    }
+
+    .tg tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .tg th {
+        text-decoration: none;
+        padding: 5px;
+        padding-left: 25px;
+        text-align: left;
+        width: 66%;
+    }
+
+    .tg td {
+        text-decoration: none;
+        padding: 5px;
+        text-align: left;
+        width: 84%;
+    }
+
+    .cabecalho {
+        display: flex;
+        width: 100%;
+        margin-left: 20px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-device-width: 520px) and (min-device-width: 400px) {
+    .container-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100vw;
+        height: 90vh;
+    }
+
+    .container-area2 {
+        width: 98%;
+        height: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .container-dados {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: center;
+    }
+
+    .cabecalho {
+        display: flex;
+        width: 100%;
+        margin-left: 20px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .tg {
+        table-layout: fixed;
+        border-collapse: collapse;
+        height: 100%;
+        width: 100%;
+    }
+
+    .tg tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .tg th {
+        text-decoration: none;
+        padding: 5px;
+        padding-left: 25px;
+        text-align: left;
+        width: 67%;
+    }
+
+    .tg td {
+        text-decoration: none;
+        padding: 5px;
+        text-align: left;
+        width: 65%;
+    }
+
+}
+
+@media only screen and (max-device-width: 700px) and (min-device-width: 521px) {
+    .container-area {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .container-area2 {
+        width: 98%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .container-dados {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: center;
+    }
+
+    .cabecalho {
+        display: flex;
+        width: 100%;
+        margin-left: 20px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .tg {
+        table-layout: fixed;
+        border-collapse: collapse;
+        height: 100%;
+        width: 100%;
+    }
+
+    .tg tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .tg th {
+        text-decoration: none;
+        padding: 5px;
+        padding-left: 25px;
+        text-align: left;
+        width: 69%;
+    }
+
+    .tg td {
+        text-decoration: none;
+        padding: 5px;
+        text-align: left;
+        width: 85%;
+    }
+}
+
+@media only screen and (max-device-width: 950px) and (min-device-width: 701px) {
+    .container-area {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .container-area2 {
+        width: 98%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .container-dados {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: center;
+    }
+
+    .cabecalho {
+        display: flex;
+        width: 100%;
+        margin-left: 20px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .tg {
+        table-layout: fixed;
+        border-collapse: collapse;
+        height: 100%;
+        width: 100%;
+    }
+
+    .tg tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .tg th {
+        text-decoration: none;
+        padding: 5px;
+        padding-left: 25px;
+        text-align: left;
+        width: 69%;
+    }
+
+    .tg td {
+        text-decoration: none;
+        padding: 5px;
+        text-align: left;
+        width: 85%;
+    }
+
+}
+
+@media only screen and (max-device-width: 1250px) and (min-device-width: 951px) {
+    .container-area {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .container-area2 {
+        width: 80%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .container-dados {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+        overflow-y: hidden;
+        justify-content: center;
+    }
+
+    .cabecalho {
+        display: flex;
+        width: 100%;
+        margin-left: 20px;
+        font-weight: 600;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        font-size: 14px;
+    }
+
+    .tg {
+        table-layout: fixed;
+        border-collapse: collapse;
+        height: 100%;
+        width: 100%;
+    }
+
+    .tg tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .tg th {
+        text-decoration: none;
+        padding: 5px;
+        padding-left: 25px;
+        text-align: left;
+        width: 69%;
+    }
+
+    .tg td {
+        text-decoration: none;
+        padding: 5px;
+        text-align: left;
+        width: 85%;
+    }
+
+}
+
+@media print{
+
+    .container-dados {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .cabecalho {
+        font-size: 14px;
+    }
+
+    .tg tbody {
+        display: block;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .tg thead tr {
+        border: #000000 1px;
+        display: block;
+        position: relative;
+    }
+
+    .tg th {
+        border: solid 1px;
+        padding-left: 40px;
+        width: 48vw;
+        text-align: left;
+        font-weight: 500;
+        color: #000000;
+    }
+
+    .container-button {
+        display: none;
+    }
+
+}

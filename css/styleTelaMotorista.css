@@ -1,0 +1,721 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
+:root {
+    --font-primary: 'Inter', sans-serif;
+    --font-secundary: 'Montserrat', sans-serif;
+    --corBranca: #ffffff;
+    --corPrincipal: #c01818;
+    --preto: #000000;
+    --corFonteBranco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: var(--font-secundary);
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.295), rgba(255, 227, 227, 0.377)), url(img/bgtruck.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+}
+
+.botoes {
+    display: flex;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+
+.container-area {
+    width: 430px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #ff4f4f;
+    background-color: var(--corBranca);
+
+}
+
+.container-pesquisa{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+
+.container-form {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-button {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container-button a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    height: 260px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form label {
+    display: flex;
+    align-items: center;
+}
+
+form label input {
+    height: 50px;
+    width: 380px;
+    border: 0;
+    outline: 0;
+    border-bottom: 3px solid var(--corPrincipal);
+    transition: border-bottom 1s;
+    font-size: 18px;
+    color: var(--preto);
+    font-weight: 600;
+}
+
+form label input::placeholder {
+    font-size: 18px;
+}
+
+form label input:hover {
+
+    border-bottom: 3px solid var(--preto);
+}
+
+#cadastrar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    background-color: #399d35;
+    font-weight: 800;
+    color: var(--corFonteBranco);
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+#cadastrar:hover {
+    background-color: #275f20;
+    color: var(--corFonteBranco);
+}
+
+.frota {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 45px;
+    background-color: #35669d;
+    font-weight: 800;
+    color: var(--corFonteBranco);
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.frota:hover {
+    background-color: #203d5f;
+    color: var(--corFonteBranco);
+}
+
+.form-img {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-area {
+    display: flex;
+    width: 115px;
+    height: 115px;
+    justify-content: center;
+}
+
+.img-area img {
+    width: 90%;
+    height: 90%;
+}
+
+.ui-select-style1 {
+    padding-left: 7px;
+    border: 1px solid #cdcdcd;
+    border-radius: 4px;
+    color: rgb(119, 119, 119);
+    outline: none;
+}
+
+.ui-select-style1:focus {
+    border: 1px solid rgb(140, 174, 229);
+    box-shadow: 1px 1px 1px rgba(140, 174, 229, 0.25);
+}
+
+/* Chrome e outros */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/*Responsividade */
+@media only screen and (max-device-width: 349px) and (min-device-width: 270px) {
+
+    .container-area {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    .container-form {
+        width: 90%;
+        height: 90%;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .form-img {
+        display: none;
+    }
+
+    .label-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    form label input {
+        font-size: 18px;
+        padding-left: 5px;
+        height: 50px;
+        width: 100%;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form .container-radios label {
+        font-size: 18px;
+        color: var(--preto);
+        font-weight: 600;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    form .container-radios input {
+        margin-right: 7px;
+    }
+
+    .form label i {
+        display: none;
+    }
+
+    .container-button .frota {
+        font-size: 22px;
+    }
+
+    .container-button #cadastrar {
+        font-size: 22px;
+    }
+
+    .container-button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-device-width: 399px) and (min-device-width: 350px) {
+
+    .container-area {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+
+    .container-form {
+        width: 90%;
+        height: 90%;
+    }
+
+    .container-question {
+        display: flex;
+    }
+
+    .form-img {
+        display: none;
+    }
+
+    .label-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    form label input {
+        font-size: 22px;
+        padding-left: 5px;
+        height: 50px;
+        width: 100%;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form .container-radios label {
+        font-size: 22px;
+        color: var(--preto);
+        font-weight: 600;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    form .container-radios input {
+        margin-right: 7px;
+    }
+
+    .form label i {
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .container-button .frota {
+        font-size: 22px;
+    }
+
+    .container-button #cadastrar {
+        font-size: 22px;
+    }
+
+    .container-button {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-device-width: 520px) and (min-device-width: 400px) {
+    .container-area {
+        width: 100%;
+        height: 90%;
+    }
+
+    .container-form {
+        width: 80%;
+        height: 95%;
+    }
+
+    .container-question {
+        display: flex;
+    }
+
+    .form-img {
+        display: none;
+    }
+
+    .label-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    form label input {
+        font-size: 22px;
+        padding-left: 5px;
+        height: 50px;
+        width: 100%;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form .container-radios label {
+        font-size: 22px;
+        color: var(--preto);
+        font-weight: 600;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    form .container-radios input {
+        margin-right: 7px;
+    }
+
+    .form label i {
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .container-button .frota {
+        font-size: 22px;
+    }
+
+    .container-button #cadastrar {
+        font-size: 22px;
+    }
+
+    .container-button {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-device-width: 700px) and (min-device-width: 521px) {
+    .container-area {
+        max-width: 500px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .container-form {
+        width: 80%;
+        height: 95%;
+    }
+
+    .container-question {
+        display: flex;
+    }
+
+    .form-img {
+        display: none;
+    }
+
+    .label-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    form label input {
+        font-size: 22px;
+        padding-left: 5px;
+        height: 50px;
+        width: 100%;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form .container-radios label {
+        font-size: 22px;
+        color: var(--preto);
+        font-weight: 600;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    form .container-radios input {
+        margin-right: 7px;
+    }
+
+    .form label i {
+        display: none;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .container-button .frota {
+        font-size: 22px;
+    }
+
+    .container-button #cadastrar {
+        font-size: 22px;
+    }
+
+    .container-button {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-device-width: 950px) and (min-device-width: 701px) {
+    .container-area {
+        max-width: 600px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .container-form {
+        display: flex;
+        width: 80%;
+        height: 90%;
+        justify-content: space-evenly;
+    }
+
+    .container-question {
+        display: flex;
+    }
+
+    .form-img {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-area {
+        display: flex;
+        width: 30%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .img-area img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .label-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    form label input {
+        font-size: 22px;
+        padding-left: 5px;
+        height: 50px;
+        width: 100%;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form .container-radios label {
+        font-size: 22px;
+        color: var(--preto);
+        font-weight: 600;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    form .container-radios input {
+        margin-right: 7px;
+    }
+
+    .form label i {
+        display: none;
+    }
+
+    .form {
+        display: flex;
+        width: 100%;
+        height: 60%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .container-button .frota {
+        font-size: 22px;
+    }
+
+    .container-button #cadastrar {
+        font-size: 22px;
+    }
+
+    .container-button {
+        width: 100%;
+    }
+
+}
+
+@media only screen and (max-device-width: 1250px) and (min-device-width: 951px) {
+    .container-area {
+        max-width: 600px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .container-form {
+        width: 80%;
+        height: 90%;
+    }
+
+    .container-question {
+        display: flex;
+    }
+
+    .form-img {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-area {
+        display: flex;
+        width: 30%;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .img-area img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .label-input {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    form label input {
+        font-size: 22px;
+        padding-left: 5px;
+        height: 50px;
+        width: 100%;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form .container-radios label {
+        font-size: 22px;
+        color: var(--preto);
+        font-weight: 600;
+    }
+
+    form .container-radios {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    form .container-radios input {
+        margin-right: 7px;
+    }
+
+    .form label i {
+        display: none;
+    }
+
+    .form {
+        display: flex;
+        width: 100%;
+        height: 60%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .container-button .frota {
+        font-size: 22px;
+    }
+
+    .container-button #cadastrar {
+        font-size: 22px;
+    }
+
+    .container-button {
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+</head>
+<style>
+    .divBody {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
+        justify-content: center;
+    }
+
+    .divForm {
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+    }
+
+    .form input {
+        height: 45px;
+        width: 100%;
+        border: 0;
+    }
+
+    .label-input {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+</style>
+
+<body>
+    <div class="divBody">
+        <div class="divForm">
+            <form action="" method="post" name="form">
+                <label class="label-input">
+                    Unidade de Latinha/Litr&atilde;o: <input type="text" name="f_Unidade" value="1">
+                </label>
+                <label class="label-input">
+                    Quantidade de ML: <input type="text" name="f_Ml">
+                </label>
+                <label class="label-input">
+                    Pre&ccedil;o: <input type="text" name="f_Preco">
+                </label>
+                <br>
+                <button type="button" onclick="converter()">CALCULAR</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function converter() {
+            var unidade = parseFloat(document.form.f_Unidade.value);
+            var ml = parseFloat(document.form.f_Ml.value);
+            var preco = parseFloat(document.form.f_Preco.value);
+
+            var calcML = ml * unidade;
+
+            var realMl = calcML / preco;
+            var Real = ((preco / unidade) / ml) * 100;
+            var valorUnitario = preco / unidade;
+
+            window.alert("" + realMl.toFixed(2) + " ml por R$1" + "\nR$" + Real.toFixed(2) + " por 100 ml" + "\nR$" + valorUnitario.toFixed(2) + " por unidade de Latinha/Litrao");
+        }
+    </script>
+</body>
+
+</html>

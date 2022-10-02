@@ -1,0 +1,1434 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;1,300&family=Roboto:ital,wght@0,500;1,400;1,500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+}
+
+:root {
+    --font-primary: 'Poppins', sans-serif;
+    --font-secundary: 'Roboto', sans-serif;
+    --background-color: #018265;
+    --button: #007bff;
+}
+
+/*Container */
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+
+.container-area {
+    width: calc(100% - 300px);
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.capa {
+    width: 100%;
+    height: 270px;
+    background-image: url('../image/capa.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow-y: hidden;
+}
+
+.user {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    box-shadow: 0px 0px 10px #000003;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.user-info {
+    width: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px 0;
+}
+
+.user-info span {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    color: #fff;
+}
+
+
+/* Tabela de demanda */
+.demanda {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.demanda h2 {
+    margin: auto;
+    font-size: 32px;
+}
+
+.table-demanda {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table-demanda thead {
+    width: 100%;
+    height: 55px;
+    font-size: 14px;
+    color: #191919;
+    font-weight: 700;
+}
+
+.table-demanda thead th {
+    padding-right: 10px;
+}
+
+.table-demanda tbody {
+    font-size: 14px;
+    font-weight: 400;
+    color: #191919;
+    text-align: center;
+}
+
+.table-demanda tbody tr {
+    height: 74px;
+    border-top: 1px solid #0a7d6a;
+}
+
+.table-demanda tbody tr:hover>td {
+    background-color: #0a7d6a;
+}
+
+
+.table-demanda tbody tr:nth-child(odd) {
+    background-color: #aafbc1;
+}
+
+
+
+/* arrow */
+
+.arrow {
+    margin: 40px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #018265;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+/*SEARCH FUN */
+
+.search-func {
+    width: calc(100% - 70px);
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-func input {
+    width: 160px;
+    height: 40px;
+    padding-left: 8px;
+    outline: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    
+}
+.search-func input:nth-child(1){
+    width: 340px ;
+    margin-right: 7px;
+}
+
+.search-func input:nth-child(2){
+    background-color: var(--background-color);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    transition: all ease-in .2s;
+    border-radius: 7px;
+}
+
+.search-func input:nth-child(2):hover{
+    opacity: .8;
+}
+
+.search-func input::placeholder {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/*Menu Lateral */
+
+.menu-lateral {
+    position: fixed;
+    width: 0px;
+    min-height: 100vh;
+    background-color: #006c54eb;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all ease-in 0.5s;
+}
+
+.abriMenu {
+    width: 250px;
+}
+
+
+.menu {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu .menu-option {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.menu .menu-option i {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu .menu-option a {
+    flex: 1;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    margin-left: 10px;
+
+}
+
+.active {
+    background-color: #121323;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+/*INFOS USER -*/
+
+.infos-user form{
+    background-color: #007bff;
+    flex: 1;
+}
+
+
+
+
+/* ativar e desativar */
+.button-close {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0.2rem;
+    left: 1.2rem;
+    z-index: 99;
+    transition: all ease-in 0.4s;
+}
+
+.marginLeft {
+    margin-left: 175px;
+}
+
+.button-close .icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-close .icon i {
+    font-size: 30px;
+    color: #131523;
+    cursor: pointer;
+}
+
+.button-close .icon i:hover {
+    color: #04b347;
+}
+
+
+
+
+/*Modais */
+
+.modal-big-foto,
+.modal-demanda {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+
+
+
+.modal-big-foto-area {
+    width: 600px;
+    height: 600px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.close-big-foto-modal {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.close-big-foto-modal i {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.big-foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.big-foto img {
+    width: 95%;
+    height: 95%;
+}
+
+.close-big-modal-foto {
+    display: flex;
+}
+
+.abrirModal2 {
+    display: flex;
+}
+
+.modal2 {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #04b34738;
+}
+
+.modal-area2 {
+    width: 320px;
+    height: 130px;
+    background-color: #309736;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    text-shadow: 0px 0px 10px #191919;
+    letter-spacing: 1px;
+}
+
+.modal-info2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*CAD USER */
+
+.modal-add-user {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 100;
+    flex-direction: column;
+}
+
+.abriCadUser {
+    display: flex;
+}
+
+.close-modal-user {
+    margin-top: 0;
+    height: 30px;
+    width: calc(100% - 100px);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.close-modal-user i {
+    font-size: 21px;
+    color: #fff;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.container-area-cad {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(24, 24, 24, 0.8);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow-x: hidden;
+    box-shadow: 0 0 10px var(--background-color);
+    margin-bottom: 20px;
+}
+
+
+
+.container-area-cad form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.select {
+    width: calc(100% - 10px);
+    height: 40px;
+    font-size: 18px;
+    padding-left: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.container-area-cad form .input-item {
+    width: calc(100% - 60px);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.container-area-cad form .input-item .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -30px;
+    background-color: #1cd5ad;
+    z-index: 99;
+    border-top-left-radius: 15px;
+}
+
+.select {
+    width: calc(100% - 10px);
+    height: 40px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.container-area-cad form .input-item .icon i {
+    z-index: 500;
+    font-size: 22px;
+    position: relative;
+    color: #fff;
+}
+
+.container-area-cad form .input-item input[type="file"] {
+    display: none;
+}
+
+.container-area-cad form .input-item label {
+    width: calc(100% - 100px);
+    height: 40px;
+    color: #fff;
+    background-color: #018265;
+    margin: auto;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: all ease-in 0.4s;
+}
+
+.container-area-cad form .input-item label:hover {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    opacity: .8;
+    background-color: #fff;
+    color: #191919;
+}
+
+
+.container-area-cad form .input-item input {
+    width: 100%;
+    height: 40px;
+    padding-left: 40px;
+    border: 0;
+    outline: none;
+    z-index: 1;
+    font-size: 20px;
+    background-color: #c1c1c1;
+    letter-spacing: 2px;
+    font-weight: 500;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.container-area-cad form .input-item input::placeholder {
+    color: #191919;
+}
+
+
+
+
+
+.upload {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    flex-direction: column-reverse;
+}
+
+
+.img-perfil {
+    width: 90px;
+    height: 90px;
+    background-color: #018265;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all ease-in 0.3s;
+}
+
+.img-perfil:hover {
+    background-color: #ccc;
+}
+
+
+.img-perfil img {
+    width: 95%;
+    height: 95%;
+    cursor: pointer;
+}
+
+
+
+.entrar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.entrar input {
+    width: calc(100% - 60px);
+    height: 40px;
+    background-color: var(--background-color);
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all ease 1s;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.entrar:hover {
+    opacity: .7;
+}
+
+/* user-type */
+
+.user-type {
+    width: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+
+.type {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type input {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.type label {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/*Demanda item */
+
+.grid {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-area {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    transition: all ease-in 0.4s;
+}
+
+.demanda-item {
+    margin-left: 10px;
+    width: 470px;
+    padding: 20px 0;
+    height: auto;
+    background-color: #007bff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.d-item {
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 0 10px;
+
+}
+
+.d-item span {
+    margin-right: 10px;
+}
+
+.d-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    font-size: 19px;
+    color: #121323;
+    font-weight: bold;
+}
+
+
+
+/*Modal demanda */
+
+.modal-demanda-area {
+    margin: 30px 0;
+    width: calc(100% - 220px);
+    height: auto;
+    background-color: #fff;
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 20px 0;
+    
+}
+
+.close-modal-demanda {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--background-color);
+    margin-bottom: 10px;
+}
+
+.close-modal-demanda i {
+    font-size: 22px;
+    padding-right: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.close-modal-demanda i:hover {
+    color: #f31313;
+}
+
+.area-cad-demanda {
+    flex: 1;
+    overflow: hidden;
+
+}
+
+.area-cad-demanda form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #0000;
+}
+
+.abrirModal {
+    display: flex;
+}
+
+
+/*Cadastro de demanda */
+
+.nome-funcionario {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nome-funcionario .img-func {
+    width: 90px;
+    height: 90px;
+}
+
+.nome-funcionario .img-func img {
+    width: 90%;
+    border-radius: 50%;
+    height: 90%;
+}
+
+.nome-funcionario span {
+    font-size: 25px;
+    color: #191919;
+    font-weight: bold;
+
+}
+
+.nome-funcionario i {
+    font-size: 25px;
+    color: #131523;
+    margin-right: 20px;
+}
+
+
+.demanda-option {
+    width: 600px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.demanda-option span,
+.observacao-option span {
+    font-size: 20px;
+    color: #121323;
+    margin-right: 10px;
+}
+
+.demanda-option input,
+.demanda-option select {
+    flex: 1;
+    height: 30px;
+}
+
+.observacao-option {
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.observacao-option textarea {
+    flex: 1;
+    height: 50px;
+    resize: none;
+    padding: 5px 10px;
+}
+
+.modal-demanda-button {
+    width: 600px;
+    height: 50px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.modal-demanda-button input {
+    width: 150px;
+    height: 40px;
+    background-color: var(--button);
+    font-size: 20px;
+    color: #fff;
+    border-top-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+}
+
+.modal-demanda-button input:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+/*Area do ADM */
+
+.adm {
+    width: 100%;
+    min-height: 300px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.adm-area {
+    width: 95%;
+    height: inherit;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+
+
+.area-user {
+    width: 290px;
+    height: auto;
+    border: 2px solid #ccc;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.area-user-img {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.area-user-img img {
+    width: 90%;
+    height: 90%;
+}
+
+
+.area-user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.area-user-info label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #191919;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.area-user label a{
+    display: inline-flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 8px 0;
+    padding-right: 7px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--background-color);
+  
+}
+
+.area-user label a i{
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.acoes-user{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/*Modal de informações dos usuários para o adm */
+
+.info-modal-user {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.info-modal-user-area {
+    width: 850px;
+    height: 500px;
+    background-color: #fff;
+    flex-direction: column;
+}
+
+
+.close-modal-info-user {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.close-modal-info-user i {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.abrirModal {
+    display: flex;
+}
+
+
+.modal-grid {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.modal-grid .item {
+   flex: 1;
+    background-color: #007bff;
+}
+
+
+
+
+
+
+
+/* ANIMAÇÕES */
+
+@keyframes fade-in {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+ }
+
+ @keyframes left-in {
+    0%{
+      transform: translate(200px);
+      opacity: 0;
+    }
+
+    100%{
+      transform: translate(0);
+      opacity: 1;
+    }
+ }
+
+ @keyframes right-in {
+    0%{
+      transform: translate(-200px);
+      opacity: 0;
+    }
+
+    100%{
+      transform: translate(0);
+      opacity: 1;
+    }
+ }
+
+ @keyframes up-in {
+    0%{
+      transform: translateY(200px);
+      opacity: 0;
+    }
+
+    100%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVIDADE */
+
+
+
+@media only screen and (max-device-width: 470px) and (min-device-width: 280px) {
+    .container-area {
+        width: calc(100% - 20px);
+    }
+
+    .capa {
+        height: 190px;        
+        animation: left-in 0.8s ease-in forwards;
+    }
+
+    .user-avatar {
+        width: 120px;
+        height: 120px;
+        animation: fade-in 1.9s ease-in forwards;
+    }
+
+    .user-info {
+        margin-top: 40px;        
+        animation: right-in 0.8s ease-in forwards;
+    }
+
+    .user-info span {
+        font-size: 15px;
+    }
+
+    .modal-big-foto-area {
+        z-index: 100;
+        width: calc(100% - 30px);
+        height: 75vh;
+        
+        animation: fade-in 1.2s ease-in forwards;
+    }
+
+    .button-close .icon i {
+        color: #fff;
+    }
+
+    .modal-demanda-area {
+        width: calc(100% - 15px);
+        margin: 0;
+        padding: 0;
+    }
+
+    .nome-funcionario span {
+        font-size: 15px;
+    }
+
+    .demanda-option,
+    .observacao-option,
+    .modal-demanda-button {
+        width: calc(100% - 10px);
+        
+    }
+
+    .demanda-option span, .observacao-option span{
+        display: none;
+    }
+
+    .observacao-option textarea{
+        padding: 3px 5px;
+        font-size: 18px;
+        height: inherit;
+    }
+    .observacao-option{
+        margin-top: 10px;
+    }
+
+    .observacao-option textarea::placeholder{
+        font-size: 18px;
+    }
+
+    .demanda-option input, .demanda-option select{
+        font-size: 18px;
+        height: inherit;
+    }
+  
+    .demanda-option{
+        margin-top: 10px;
+        height: 36px;
+    }
+
+    .nome-funcionario span{
+        font-size: 20px;
+    }
+
+    /*grid */
+
+    .grid-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .demanda-item {
+        width: calc(100% - 20px);
+        margin-left: 20px;
+    }
+
+    .adm-area {
+        width: 100%;
+        height: inherit;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .area-user {
+        width: auto;
+    }
+
+    .search-func {
+        width: 100%;
+        padding-right: 0;
+        justify-content: center;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-func input {
+        width: calc(100% - 20px);
+        height: 35px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+    
+
+    .search-func input::placeholder {
+        font-size: 19px;
+    }
+
+    .container-area-cad {
+        width: calc(100% - 20px);
+        padding: 25px 0;
+    }
+
+    .container-area-cad form .input-item{
+        width: calc(100% - 25px);
+       margin-bottom: 14px;
+    }
+
+    .container-area-cad form .input-item select{
+        width: calc(100% - 2px);
+    }
+
+    .entrar input {
+        width: calc(100%  - 25px);
+    }
+
+    .close-modal-user{
+        width: calc(100% - 43px);
+        margin-bottom: 15px;
+    }
+
+    .info-modal-user-area{
+        width: calc(100%  - 10px);
+        padding: 0 0 20px 0;
+        height: auto;
+    }
+
+
+    .modal-add-user{
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+
+
+    .adm{
+        animation: right-in 0.8s ease-in forwards;
+    }
+}
+
+@media only screen and (max-device-width: 812px) and (min-device-width: 485px) {
+    .container-area {
+        width: calc(100% - 20px);
+    }
+
+    .capa {
+        height: 190px;
+    }
+
+    .user-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .user-info {
+        margin-top: 40px;
+    }
+
+    .user-info span {
+        font-size: 15px;
+    }
+
+    .modal-big-foto-area {
+        z-index: 100;
+        width: calc(100% - 30px);
+        height: 75vh;
+    }
+
+    .button-close .icon i {
+        color: #fff;
+    }
+
+    .modal-demanda-area {
+        width: calc(100% - 15px);
+        margin: 0;
+        padding: 0;
+    }
+
+    .nome-funcionario span {
+        font-size: 15px;
+    }
+
+    .demanda-option,
+    .observacao-option,
+    .modal-demanda-button {
+        width: calc(100% - 10px);
+        
+    }
+
+    .demanda-option span, .observacao-option span{
+        display: none;
+    }
+
+    .observacao-option textarea{
+        padding: 3px 5px;
+        font-size: 18px;
+        height: inherit;
+    }
+    .observacao-option{
+        margin-top: 10px;
+    }
+
+    .observacao-option textarea::placeholder{
+        font-size: 18px;
+    }
+
+    .demanda-option input, .demanda-option select{
+        font-size: 18px;
+        height: inherit;
+    }
+  
+    .demanda-option{
+        margin-top: 10px;
+        height: 36px;
+    }
+
+    .nome-funcionario span{
+        font-size: 20px;
+    }
+
+    /*grid */
+
+    .grid-area {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .demanda-item {
+        width: calc(100% - 20px);
+        margin-left: 20px;
+    }
+
+    .adm-area {
+        width: 100%;
+        height: inherit;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .area-user {
+        width: auto;
+    }
+
+ 
+
+    .search-func {
+        padding-right: 0;
+        justify-content: center;
+        height: auto;
+    }
+
+    .search-func input {
+        width: calc(100% - 20px);
+        height: 45px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        font-size: 18px;
+    }
+
+    .search-func input::placeholder {
+        font-size: 19px;
+    }
+
+    .container-area-cad {
+        width: calc(100% - 20px);
+        padding: 25px 0;
+    }
+
+    .container-area-cad form .input-item{
+        width: calc(100% - 25px);
+       margin-bottom: 14px;
+    }
+
+    .container-area-cad form .input-item select{
+        width: calc(100% - 2px);
+    }
+
+    .entrar input {
+        width: calc(100%  - 25px);
+    }
+
+    .close-modal-user{
+        width: calc(100% - 43px);
+        margin-bottom: 15px;
+    }
+
+    .info-modal-user-area{
+        width: calc(100%  - 10px);
+        padding: 0 0 20px 0;
+        height: auto;
+    }
+
+
+    .modal-add-user{
+        justify-content: flex-start;
+        padding-top: 30px;
+    }
+}
